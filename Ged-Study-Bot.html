@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ged-Tutor-Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui-theme-default.css" />
+    <meta name="description" content="A Ged Tutor Bot. A Bot Designed To Help Users Pass A Ged Exam Built Using BotUI.">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+body{
+	background-image: url("bg1.png");
+	
+	background-size: 100% 100%;
+	
+	}
+	
+	#navbar {
+	background-color: #734A12;
+	border-style: solid;
+	border-color: #E8C782;
+	border-width: 8px;
+	border-radius: 25px;
+	color: #E8C782;
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+	}
+	#console {
+	margin-left: 275px;
+	margin-right: 200px;
+	margin-bottom: 200px;
+	border-style: solid;
+	border-color: #734A12;
+	border-width: 8px;
+	
+	border-radius: 25px;
+	background-color: #E8C782;
+	color: #734A12;
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+	}
+	
+	
+	
+h1 {
+font-size: 45px;
+}
+#header {
+   background-color: #734A12;
+   width: 100%;
+   margin-top: 15px;
+   border-radius: 25px;
+   border-style: solid;
+	border-color: #E8C782;
+	border-width: 8px;
+   color: #E8C782;
+   text-align: center;
+   margin-bottom: 50px;
+   font-family: 'Merriweather', serif;
+   opacity: 0.9;
+    filter: alpha(opacity=90);
+   }
+   .btn-warning {
+   background-color: #734A12;
+   color: #E8C782;
+   opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+#menu2{
+  border-radius: 15px;
+   border-style: solid;
+	border-color: #E8C782;
+	border-width: 8px;
+   background-color: #734A12;
+   color: #E8C782;
+   opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+  
+   
+    #menu {
+   z-index: +1;
+   width: 135px;
+    position: fixed;
+	margin-top: 75px;
+	
+	margin-left: 1185px;
+   border-style: solid;
+	border-color: #E8C782;
+	color: #E8C782;
+	border-width: 8px;
+	border-radius: 10px;
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+   }
+   #gedTutor {
+	z-index: +1;
+	border-style: solid;
+	border-radius: 25px;
+	border-width: 12px;
+	border-color: #734A12;
+	background-color: #734A12;
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+	}
+   
+   #botImage {
+   	
+   }
+   
+ #sidenav1 {
+  background-color: #734A12;
+  font-family: 'Merriweather', serif;
+  width: 225px;
+  height: 1400px;
+  margin-left: 25px;
+     border-radius: 25px;
+   border-style: solid;
+	border-color: #E8C782;
+	color: #E8C782;
+	border-width: 8px;
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+   }
+    #navControl {
+	z-index: +1;
+	 border-style: solid;
+	border-color: #E8C782;
+	color: #E8C782;
+	border-width: 8px;
+	border-radius: 10px;
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+	}    
+        #pagebottom {
+            height:200px;
+        }
+		
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  margin-right: 150px;
+  margin-left: 25px;
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+  background-color: #734A12;
+  border-radius: 25px;
+   border-style: solid;
+	border-color: #E8C782;
+	border-width: 8px;
+	color: #E8C782;
+	opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+}
+	</style>
+  </head>
+  <body>
+  
+ 
+  
+ <div class="container"id= "header" >
+  <div class="page-header">
+    <h1>Ged Study Bot</h1>  
+            
+  </div>    
+</div>
+
+     <div class="btn-group btn-group-justified" id="menu2">
+  <a href="#" class="btn btn-warning">Coming Soon</a>
+  <a href="./home1.html" class="btn btn-warning">Student Info</a>
+   <a href="./studyhall.html" class="btn btn-warning">Study Hall</a>
+
+  <a href="./commons.html" class="btn btn-warning">The Commons!</a>
+  
+  <a href="#" class="btn btn-warning">Coming Soon!</a>
+</div>
+
+    <div class="btn-group btn-group-vertical" id="menu">
+  
+  <a href="./radio.html"  class="btn btn-warning"
+  target="popup" 
+  onclick="window.open('./radio.html','popup','width=385,height=540'); return false;">
+   Radio
+</a>
+  
+  <a href="./contactForm/index.html" class="btn btn-warning"  
+  target="popup" 
+  onclick="window.open('./contactForm/index.html','popup','width=450,height=500'); return false;">
+   Contact Us
+</a>
+ <a href="./quarters.html" class="btn btn-warning">Quarters!</a>
+   <a href="./studyhall.html" class="btn btn-warning">Study Hall</a>
+  <a href="./commons.html" class="btn btn-warning">The Commons</a>
+  <a href="./blog.html" class="btn btn-warning">Blog</a>
+  <a href="./admin.html" class="btn btn-warning">Admin</a>
+</div>
+</div>
+
+<br><br>
+     <div class="col-sm-2 sidenav" id= "sidenav1">
+	 <br>
+	 <h3 id='online'>Users Online: </h3>
+	 <br>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+	  <br>
+	  <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+	
+	
+	
+ 
+
+  <div class="container-fluid text-center" id="console">    
+  <br>
+     <h4>The Ged Tutor bot is a Study Resource designed to help you pass the General Education Exam.</h4>
+	 
+  <div class="row content">
+  
+  <div class="col-sm-4"> 
+        <img src="studybot.png" alt="Ged Study Bot" width="175px" height="300px" align="right">
+    </div>
+    <div class="col-sm-4"> 
+  
+    <div class="botui-app-container" id="gedTutor" align="left">
+	
+  <bot-ui></bot-ui>
+     </div>
+      <br><br><br><br><br><br><br><br><br><br>
+	  <div class="col-sm-4"> 
+	  <div class="row" id="pagebottom">
+      
+      
+      </div>
+	  </div>
+    </div>
+	
+	 
+	</div>
+	</div>
+	
+
+	
+	
+	
+	  
+	
+	
+	
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="https://unpkg.com/botui/build/botui.js"></script>
+    <script src="./main.js" id="jsNavi"></script>
+	
+
+	
+	<script>
+	var math = false;
+var english = false;
+  var reading = false;
+  var writing = false;
+var history = false;
+var science = false;
+  
+       var storedName = localStorage.getItem('name');
+				 
+				console.log(storedName);
+var botui = new BotUI('gedTutor');
+botui.message.add({
+    delay: 3000,
+    loading: true,
+	content: "Well hello " + storedName + ' and Welcome to General Education Studies!'
+	}).then(function () {
+	botui.message.add({
+    delay: 5000,
+    loading: true,
+  content: 'I am the Ged Tutor Bot!' + ' I have been assigned to help you study to pass your General Education Exam!'
+}).then(function () { // get the result
+  botui.message.add({
+	delay: 4500,
+    loading: true,
+    content: 'Im super excited and I hope you are too!' + ' Okay! So lets begin!'
+  }).then(function() {
+	  
+	  userBegin();
+  });
+	
+ });
+ })
+  
+  var userBegin = function() {
+botui.message.add({ // show a message
+  delay: 500,
+  content: 'There are Four (4) Main Subject Groups for you to choose to study from.'
+}).then(function () { // wait till its shown
+   botui.message.add({ 
+    delay: 1500, 
+      content: "The Study Groups Are Math, Language Arts, Social Studies and Science."
+    
+  });
+}).then(function (res) { // get the result
+  botui.message.add({
+	delay: 3000,
+    loading: true,
+    content: "Its up to you " + storedName + " , which Study Group you want to begin."
+  });
+  }).then(function (res) { // get the result
+  botui.message.add({
+	delay: 5000,
+    loading: false,
+	
+    content: 'Are you ready to Choose a Study Group?'
+  });
+  
+  
+  
+}).then(function (res) {
+  botui.action.button({
+	  delay: 6000,
+  action: [
+    { // show only one button
+      text: 'Yes',
+      value: 'yes'
+    }, {
+		text: 'Nope',
+		value: 'no'
+	}
+  ]
+  }).then(function (res) {
+	  if(res.value == 'yes') {
+	  botui.message.add({
+     content: 'Awesome! What Study Group would you like to begin?'
+	  
+});
+	  } else {
+		 botui.message.add({
+	delay: 500,
+    loading: false,
+	
+    content: 'Maybe later then.'
+  }); 
+	  }
+  }).then(function() {
+        botui.message.removeAll();
+		
+  }).then(function() {
+      botui.message.add({
+     content: 'Awesome! What Study Group would you like to begin?'
+	  
+  });
+  }).then(function (res) {
+	  botui.action.button ({
+		  delay: 3000,
+		  action: [
+    { 
+      text: 'Math',
+      value: 'math'
+    }, {
+		text: 'Language',
+		value: 'english'
+	}, {
+		text: 'History',
+		value: 'history'
+	}, {
+		text: 'Science',
+		value: 'science'
+	}
+  ]
+	  }).then(function (res) {
+	  if(res.value == 'math') {
+	  botui.message.add({
+  
+      content: "Great! Let's do Math!"
+	  
+	  }).then(function (res) {
+		  mathBegin();
+	  })
+	  } else if(res.value == 'english') {
+		 botui.message.add({
+	delay: 500,
+    loading: false,
+	
+    content: 'Great! ' + " Let's work on Language Arts!"
+  }).then(function () {
+      englishBegin();
+  })
+	  } else if(res.value == 'science') {
+		 botui.message.add({
+	delay: 500,
+    loading: false,
+	
+    content: 'Science content coming soon.'
+  }); 
+	  } else if(res.value == 'history') {
+		 botui.message.add({
+	delay: 500,
+    loading: false,
+	
+    content: 'History content coming soon.'
+  }); 
+	  } 
+	  
+	  
+	  
+  });
+  
+  
+  
+});
+});
+  }
+  
+  var math3 = function() {
+      $.getScript("math.js");
+      
+  }
+  
+     //Math Curriculum Starts Here ------->
+  
+var mathBegin = function () {
+  botui.message
+    .bot({
+      delay: 8000,
+      content: 'Take a look at this study material. Then let me know if you want to try some practice questions'
+    }).then(function (res) {
+  botui.action.button({
+	  delay: 6000,
+  action: [
+    { // show only one button
+      text: 'Practice',
+      value: 'practice'
+    }, {
+		text: 'No Thanks',
+		value: 'nope'
+	}
+  ]
+  }).then(function (res) {
+	  if(res.value == 'practice' && math == true) {
+	  botui.message.add({
+  type: 'embed', // this is 'text' by default
+  content: '![Text Structures](https://www.google.com/imgres?imgurl=https://www.nsbsd.org/cms/lib/AK01001879/Centricity/Domain/781/Text%2520Structure%2520Poster.png&imgrefurl=https://www.nsbsd.org/Page/3561&h=698&w=1049&tbnid=h5XKh_5hgoMw8M:&tbnh=140&tbnw=211&usg=__aOKnloRcO9d85JHs4TONSmlV8dc%3D&vet=10ahUKEwjR6unR053aAhUErFMKHbKJC9AQ9QEILTAA..i&docid=2xrAhY01xrBRGM&sa=X&ved=0ahUKEwjR6unR053aAhUErFMKHbKJC9AQ9QEILTAA)'
+	  
+	  });
+  
+  
+}else {
+		 botui.message.add({
+	delay: 500,
+    loading: false,
+	
+    content: 'Maybe later then.'
+  }); 
+	  }
+mathTips();
+});
+});
+}
+var mathTips = function () {
+	botui.message
+    .bot({
+      delay: 5000,
+      content: 'Here are some Math Tips you should know before attempting your Ged Exam.'
+	}).then(function (res) {
+	if(math == true)
+		botui.message.add({
+			delay: 5000,
+  type: 'embed', // this is 'text' by default
+  content: 'https://www.youtube.com/embed/aVeZR7FM28s'
+	  
+	  });
+	});
+    backToBeginning();
+}
+var backToBeginning = function () {
+    botui.action.button({
+	  delay: 6000,
+  action: [
+    { // show choices
+      text: 'Start Over',
+      value: 'startOver'
+    }, {
+		text: 'Next',
+		value: 'next'
+	}
+  ]
+    
+}).then(function (res) {
+	  if(res.value == 'startOver') {
+	  botui.message.add({
+  type: 'text', // this is 'text' by default
+  content: 'Starting Over'
+	  
+	  });  
+	  }
+	  userBegin();
+  });
+  }
+  
+    // English Language Curriculum
+	
+		var englishBegin = function () {
+		english = true;
+		
+	botui.message.add({
+        delay: 500,
+		content: "Do you want to start with Reading or Writing?"
+	
+    }).then(function () {
+	botui.action.button({
+	  delay: 1500,
+  action: [
+    { // show choices
+      text: 'Reading',
+      value: 'reading'
+    }, {
+		text: 'Writing',
+		value: 'writing'
+	}
+  ]
+    
+}).then(function (res) {
+	  if(res.value == 'reading') {
+	  botui.message.add({
+  type: 'text', 
+  delay: 1000,
+  content: 'Okay! ' + " Let's talk about reading. " + " We'll start with Identifying Text Structure."
+	  
+	  });  
+	  readingBegin();
+	  
+	  }  else {
+    botui.message.add({
+  type: 'text', 
+  delay: 1000,
+      content: 'Okay! ' + " Let's talk about Writing. " + " We'll start with Identifying Grammar and Sentence Structure."
+  });
+  }
+	  writingBegin();
+  });
+  });
+  } 
+  
+   
+ 
+  //Reading ------>
+  
+    function readingBegin() {
+	reading = true;
+      botui.message.bot({
+      delay: 3000,
+      content: 'Text structure refers to how the information within a written text is organized. ' + "A text might present a main idea and details; a cause and then its effects; and/or different views of a topic."
+	}).then(function () {
+	      if(reading == true) {
+	   botui.message.add({
+			delay: 5000,
+  type: 'embed', // this is 'text' by default
+  content: 'https://www.youtube.com/watch?v=nmmOOxA-ig8'
+	  
+	  }).then(function () {
+	       botui.message.add({
+		     delay: 265000,
+			 content: "Are you ready to move on?"
+		   });
+	  }).then(function (res) {
+	        botui.action.button({
+	  delay: 1500,
+  action: [
+    { // show choices
+      text: "I'm Ready",
+      value: 'ready'
+    }, {
+		text: 'Not yet',
+		value: 'notReady'
+	}
+  ]
+  }).then(function (res) {
+      if(res.value == 'notReady') {
+      readingBegin();
+	  } else {
+	    	 botui.message.add({
+	delay: 500,
+    loading: false,
+	
+    content: 'Okay! ' + " Let's take a little quiz!"
+  });
+	  }
+	  });
+	  });
+	  }
+	});
+    }
+  
+   //Writing -------------->
+    function writingBegin() {
+	     botui.message.bot({
+      delay: 2000,
+      content: 'Lesson 1'
+	})
+	}
+  
+  
+  
+  
+	</script>
+	
+	
+  
+	
+  <div id="wrap">
+  <div id="main" class="container clear-top">
+    <p>
+	<a href="./tos/index.html" class="btn btn-warning"  
+  target="popup" 
+  onclick="window.open('./tos/index.html','popup','width=450,height=500'); return false;">
+  Terms and Conditions
+</a>
+	</p>
+  </div>
+</div>
+<footer class="footer"></footer>
+     
+	
+
+  </body>
+</html>
