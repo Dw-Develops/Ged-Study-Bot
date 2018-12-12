@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BotUI
 
 [![Join the chat at https://gitter.im/BotUIChat/botui](https://badges.gitter.im/BotUIChat/botui.svg)](https://gitter.im/BotUIChat/botui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![npm](https://img.shields.io/npm/v/botui.svg?style=flat-square)](https://www.npmjs.com/package/botui) [![npm](https://img.shields.io/npm/dm/botui.svg?style=flat-square)](https://www.npmjs.com/package/botui) [![newsletter](newsletter.png)](https://tinyletter.com/moinhq)
@@ -58,3 +59,7 @@ botui.message.bot({ // show first message
 ### License
 
 [MIT License](https://github.com/moinism/botui/blob/master/LICENSE) - Copyrights (c) 2017 - Moin Uddin
+=======
+# Ged-Study-Bot
+I'm building a chatbot ui that will be programmed to administer study material in a structured way that will allow users to engage with the material. The bot ui will administer practice questions, accept multiple choice answers, display images, videos and flash cards. The first of many coming soon study bots.
+>>>>>>> f29e25dfbbfc36a4ceffd8f38ec44463390d022a
