@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="build/botui.min.css">
+  <link rel="stylesheet" href="build/botui-theme-default.css">
+</head>
+<body>
+
+  <div class="botui-app-container" id="gedTutor">
+    <bot-ui></bot-ui>
+  </div>
+  <script src="https://cdn.jsdelivr.net/vue/2.0.5/vue.min.js"></script>
+  <script src="build/botui.js"></script>
+ 
+  	<script>
+  
+var botui = new BotUI('gedTutor');
+     
+
+/*  var vis = true;
+var e = '';
+  if(vis == true;) {
+     enter();
+  } else { */
+botui.message.add({
+    delay: 1500,
+    loading: true,
+	content: '![](images/ava-marie-2.png)' + 'Welcome to the Study Bot Academy!! ' + 'I am the Ged Study Bot, and I am here to help you get ready for the Ged Final Exam!'
+	}).then(function () {
+	botui.message.add({
+    delay: 2500,
+    loading: true,
+  content: "For now, I am the only studybot that is available. I'm happy to help you study for the general education examination."
+}).then(function () { 
+
+    // Collect UserName
+	
+	botui.message.add({ 
+  delay: 3000,
+  human: true,
+  content: 'Lets begin by telling me your name'
+}).then(function () { 
+  return botui.action.text({ 
+    action: {
+      placeholder: 'Your name'
+    }
+  });
+}).then(function (res) { 
+  botui.message.add({
+	delay: 3000,
+    loading: true,
+    content: "It's great to meet you " + res.value 
+  });
+       name = ("name", res.value);
+	     console.log(name);
+			localStorage.setItem('name', res.value);
+  }).then(function (res) { 
+  botui.message.add({
+	delay: 7500,
+    loading: false,
+	content: " Be sure to visit often to keep up with updates and new study materials!"
+	
+	// Collect User Email
+  }).then(function () {
+      botui.message.add({
+	     delay: 2500,
+		 loading: true,
+		 content: 'Please enter your email address to sign up for our newsletter and gain beta access to our site'
+	  })
+  }).then(function () { 
+  return botui.action.text({ 
+      delay: 2500,
+    action: {
+      placeholder: 'Your Email',
+	  sub_type: 'email'
+    }
+  });
+}).then(function (res) {
+  
+			
+			 e = ('email', res.value);
+			function _(id){ return document.getElementById(id); }
+function submitForm(){
+	
+	var formdata = new FormData();
+	
+	formdata.append( "e", _("e").value );
+	
+	var ajax = new XMLHttpRequest();
+	ajax.open( "POST", "emailCapture.php" );
+	ajax.onreadystatechange = function() {
+		if(ajax.readyState == 4 && ajax.status == 200) {
+			if(ajax.responseText == "success"){
+			console.log("success");
+				_("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+			} else {
+				_("status").innerHTML = ajax.responseText;
+				
+			}
+		}
+	}
+	ajax.send( formdata );
+}
+			}
+).then(function () {
+    botui.message.add({
+	     delay: 5000,
+		 loading: true,
+		 content: 'Thank you for registering with us! ' + 'We hope you enjoy your early look at our platform and hope you follow our progression as we grow our application and community.'
+	     
+	  })
+}).then(function () {
+   
+	  enter();
+	  });
+	  
+});
+  });
+  
+  
+ function enter () {
+ setTimeout(function(){ window.location.href = "./test.html"; }, 12000);
+ 
+ 
+	};
+	});
+	/*}; */
+	</script>
+
+</body>
+</html>
