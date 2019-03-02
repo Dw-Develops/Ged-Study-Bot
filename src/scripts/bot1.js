@@ -1,5 +1,5 @@
  //var botui = new BotUI('hello-world');
-
+   
   var math = false;
   var mathi = 0;
 var english = false;
@@ -7,27 +7,33 @@ var english = false;
   var writing = false;
 var history = false;
 var science = false;
+let i = 0;
 
 
-	  
+//<----Introduction--LogIn---->//
+
+
+
+//<-----Begin Studies ---->//
+	   var botui = new BotUI('gedTutor');
        var storedName = localStorage.getItem('name');
 				 
 				console.log(storedName);
-var botui = new BotUI('gedTutor');
+
 botui.message.add({
     delay: 3000,
     loading: true,
-	content: "![](images/ava-marie-2.png)" + "Well hello " + storedName + ' and Welcome to General Education Studies!'
+	content: "![](images/studyBot1.png)" + "Well hello " + storedName + ' and Welcome to General Education Studies! 😍 😍 😍  '
 	}).then(function () {
 	botui.message.add({
     delay: 5000,
     loading: true,
-  content: 'I am the Ged Tutor Bot!' + ' I have been assigned to help you study to pass your General Education Exam!'
+  content: 'I am the Ged Tutor Bot!' +  '🤖' + ' I have been assigned to help you study to pass your General Education Exam! 🌟 🌟 🌟 '
 }).then(function () { // get the result
   botui.message.add({
 	delay: 4500,
     loading: true,
-    content: 'Im super excited and I hope you are too!' + ' Okay! So lets begin!'
+    content: 'Im super excited and I hope you are too!' + ' Okay! So lets begin! 👩‍🎓 👨‍🎓'
   }).then(function() {
 	  
 	  userBegin();
@@ -39,28 +45,7 @@ botui.message.add({
   var userBegin = function() {
 botui.message.add({ // show a message
   delay: 500,
-  content: 'There are Four (4) Main Subject Groups for you to choose to study from.'
-}).then(function () { // wait till its shown
-   botui.message.add({ 
-    delay: 1500, 
-      content: "The Study Groups Are Math, Language Arts, Social Studies and Science."
-    
-  });
-}).then(function (res) { // get the result
-  botui.message.add({
-	delay: 3000,
-    loading: true,
-    content: "Its up to you " + storedName + " , which Study Group you want to begin."
-  });
-  }).then(function (res) { // get the result
-  botui.message.add({
-	delay: 5000,
-    loading: false,
-	
-    content: 'Are you ready to Choose a Study Group?'
-  });
-  
-  
+  content: 'Are you ready to Choose a Study Group?'
   
 }).then(function (res) {
   botui.action.button({
@@ -77,26 +62,41 @@ botui.message.add({ // show a message
   }).then(function (res) {
 	  if(res.value == 'yes') {
 	  botui.message.add({
-     content: "![](images/ava-marie-2.png)" + 'Awesome! What Study Group would you like to begin?'
+     content: "![](images/studyBot1.png)" + 'Awesome! What Study Group would you like to begin?   '
 	  
 });
 	  } else {
 		 botui.message.add({
 	delay: 500,
     loading: false,
-	
-    content: 'Maybe later then.'
+	type: 'embed',
+    content: 'https://cdn.htmlgames.com/2048City/'
   }); 
+      userBegin();
 	  }
-  }).then(function() {
-        botui.message.removeAll();
-		
-  }).then(function() {
-      botui.message.add({
-     content: '![](images/ava-marie-2.png)' + 'Awesome! What Study Group would you like to begin?'
-	  
+  }).then(function () { // wait till its shown
+   botui.message.add({ 
+    delay: 1500, 
+     
+    content: 'There are Four (4) Main Subject Groups for you to choose to study from. 🧐 '
   });
-  }).then(function (res) {
+}).then(function (res) { // get the result
+  botui.message.add({
+	delay: 3000,
+    loading: true,
+    content: "Its up to you " + storedName + " , which Study Group you want to begin. "
+  });
+  }).then(function (res) { // get the result
+  botui.message.add({
+	delay: 5000,
+    loading: false,
+	
+     content: "The Study Groups Are Math, Language Arts, Social Studies and Science. ✏️ 📚 🤓 "
+  });
+  
+  
+  
+}).then(function (res) {
 	  botui.action.button ({
 		  delay: 3000,
 		  action: [
@@ -118,7 +118,7 @@ botui.message.add({ // show a message
 	  if(res.value == 'math') {
 	  botui.message.add({
   
-      content: "Great! Let's do Math!"
+      content: "Great! Let's do Math! " + "Feel free to use a calculator or a scratch pad to work out the answers 🌟 📝 🌟 "
 	  
 	  }).then(function (res) {
 		  mathBegin();
@@ -160,25 +160,42 @@ botui.message.add({ // show a message
   
   
   
+  
      //Math Curriculum Starts Here ------->
      
 var mathBegin = function () {
+
 	math = true;
-	var i = 0;
-	do {
-  botui.message
+	
+	if(i > mathQData.length) {
+		botui.message
     .bot({
-      delay: 2500,
-      content: '![](images/ava-marie-2.png)' + 'First lets take an assessment of your current math skill level.'
-    }).then(function (res) { // get the result
+      delay: 1500,
+      content: '![](images/studyBot1.png)'
+    }).then(function () { // get the result
   botui.message.add({
 	delay: 3250,
+    loading: false,
+	
+    content: 'Awesome! ' + 'You have completed this section of math practice.'
+  });
+	});
+         
+	}	else {
+			
+  botui.message
+    .bot({
+      delay: 4500,
+      content: '![](images/studyBot1.png)'
+    }).then(function (res) { // get the result
+  botui.message.add({
+	delay: 5250,
     loading: false,
 	
     content: mathQData[i]['problem']
   }).then(function (res) {
   botui.action.button({
-	  delay: 5000,
+	  delay: 6000,
   action: [
     { // show 4 buttons
       text: mathQData[i]['a'],
@@ -195,35 +212,43 @@ var mathBegin = function () {
 	}
   ]
   }).then(function (res) {
-	  if(res.value == 'a' && math == true) {
+	  if(res.value == mathQData[i]['correctAnswer']) {
 	  botui.message.add({
   type: 'text', // this is 'text' by default
-  content: 'Thats so right!'
+  content: '🌟 🌟 🌟  Thats so right! 🌟 🌟 🌟 '
 	 
 	  });
- 
-  
+     i++
+	 console.log(mathQData[i]['problem']);
+	
+    let delay = setTimeout(mathBegin, 3000);
+	 
+	 
+   
 }else  {
 		 botui.message.add({
 	delay: 500,
     loading: false,
 	
-    content: 'Wrong! ' + 'The Answer was '  + mathQData[i]['correctAnswer']
-	
+    content: '🤨 🤨 Wrong! ' + 'The Answer was '  + mathQData[i]['correctAnswer'] + ' 🤨 🤨 '
+     
   }); 
+  //i++
+   let delay = setTimeout(mathBegin, 3000);
 } 
-	  }
 
+	  }
+     
 );
 });
 });
- 
-     i++
+     
 	}
-	while (i < mathQArray.length);
+	};
+
 		
 	
-}
+
 
 
 
